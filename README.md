@@ -18,7 +18,7 @@
 
 3. Установить фоновое изображение карточки через JS (background-image).
 
-4. Вставить внутрь <li> HTML:
+4. Вставить внутрь ```<li>``` HTML:
   ```html
   <h2 class="card__title">{подумайте}</h2>
   <div class="down-under">
