@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      background-color: #1e272e;
+      color: #f5f6fa;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    ul, li {
+      list-style-type: none;
+    }
+
+    main.main {
+      max-width: 1400px;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+
+    h1.main__title {
+      text-align: center;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      background-color: #e84118;
+      color: #1e272e;
+      max-width: 400px;
+      font-size: 48px;
+      border-radius: 25px;
+    }
+
+    ul.main__cards {
+      background-color: #2f3640;
+      padding: 25px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 25px;
+      border-radius: 25px;
+    }
+
+    @media screen and (max-width: 1280px) {
+      ul.main__cards {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      ul.main__cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      ul.main__cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media screen and (max-width: 540px) {
+      ul.main__cards {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    li.card {
+      position: relative;
+      background-color: #353b48;
+      color: #f5f6fa;
+      max-width: 250px;
+      height: 350px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.2s;
+      border-radius: 15px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    li.card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      
+      transition: transform 0.5s ease;
+      z-index: 0;
+      border-radius: 15px;
+    }
+
+    li.card:hover::before {
+      transform: scale(1.4);
+    }
+
+    li.card:hover {
+      transform: scale(1.05);
+    }
+
+    button {
+      background: none;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    /* img.card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    } */
+    
+    .down-under {
+      background-color: rgba(30, 39, 46, 0.8);
+      padding: 5px;
+      box-shadow: 0 0 20px 20px rgba(30, 39, 46, 0.8);
+      z-index: 1;
+    }
+
+    h2.card__title {
+      display: inline-block;
+      background-color: rgba(30, 39, 46, 0.8);
+      padding: 5px;
+      box-shadow: 0 0 20px rgba(30, 39, 46, 0.8);
+      z-index: 1;
+    }
+
+    .card__price-btn {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card__price {
+      font-weight: 600;
+      font-size: 24px;
+    }
+
+    button.card__btn {
+      background: rgba(30, 39, 46, 0.8);;
+      font-family: inherit;
+      border: 2px solid #e84118;
+      font-size: 24px;
+      padding: 10px 20px;
+      color: #f5f6fa;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: 0.2s;
+    }
+
+    button.card__btn:hover {
+      border-color: #f5f6fa;
+      background-color: #f5f6fa;
+      color: #1e272e;
+      transform: scale(1.05);
+    }
+    
+
+  </style>
+</head>
+<body>
+  <main class="main">
+    <h1 class="main__title">stuff</h1>
+    <ul class="main__cards"></ul>
+  </main>
+  <script src="solution.js"></script>
+</body>
+</html>
