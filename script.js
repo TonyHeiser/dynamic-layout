@@ -26,6 +26,7 @@
 
   * Использовать только DOM-методы (createElement, appendChild, innerHTML и т.п.).
   * Не трогать CSS и HTML — они уже готовы.
+  * Готовый результат должен быть как в result.png или похожим
  */
 
 const fetchedData = [
