@@ -30,7 +30,7 @@
   </div>
   ```
 
-5. Добавить <li> в контейнер .main__cards.
+5. Добавить ```<li>``` в контейнер .main__cards.
 
 * Использовать только DOM-методы (createElement, appendChild, innerHTML и т.п.).
 * Не трогать CSS и HTML — они уже готовы.
